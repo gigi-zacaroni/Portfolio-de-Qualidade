@@ -36,19 +36,6 @@ A auditoria cobre três funcionalidades Core:
 | Ambiente local | Docker e Docker Compose |
 | Documentação | Markdowns, planilhas |
 
----
-
-## Estratégia de testes
-
-**Tipos de teste:**
-
-- **Funcional:** valida o comportamento na tela.
-- **API:** valida endpoints, status codes e regras de negócio via Postman.
-- **Regressão:** garante que correções não quebraram o que já funcionava.
-
-**Planejamento:** para cada área Core, um caso funcional, um caso de API e um caso de regressão, com 2 casos de teste por requisito.
-
-**Bugs:** mínimo de 2 por área, classificados por severidade (Crítico, Maior ou Menor) e registrados com passos para reproduzir, resultado esperado, resultado obtido e evidência.
 
 ---
 
