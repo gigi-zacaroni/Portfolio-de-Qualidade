@@ -2,8 +2,7 @@
 
 Portfólio de QA do desafio **Quality Assurance 2026.2 (Comp Júnior)**.
 
-Este repositório documenta a auditoria de qualidade do **NaSalinha**, um sistema de check-in gamificado em que usuários registram presença com foto, acumulam pontos e competem em um ranking por temporada.
-
+Este repositório documenta a auditoria de qualidade do **NaSalinha**, um sistema preparado especificamente para o treinamento de novos Analistas de Quality Assurance
 ---
 
 ## Escopo da auditoria
