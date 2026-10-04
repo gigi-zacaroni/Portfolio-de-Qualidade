@@ -72,3 +72,16 @@ bash
 git clone LINK_DO_REPOSITORIO_NASALINHA
 cd NOME_DA_PASTA
 ```
+
+## Cronograma e Entregas por Semana
+
+| Semana | Foco Principal | Entregas e Ações Previstas |
+| :--- | :--- | :--- |
+| **Semanas 1-2** | Setup, Exploração e Documentação | Subir ambiente em Docker; criar repositório no GitHub; explorar fluxos do utilizador; redigir o `README.md` inicial.|
+| **Semana 3** | Planeamento e Design de Testes | Definir cenários para as 3 áreas Core; escrever Casos de Teste (positivos/negativos); configurar a ferramenta de gestão |
+| **Semana 4** | Execução de Testes Manuais (UI) | Executar os casos de teste de interface planeados; registar bugs |
+| **Semana 5** | Testes de API e Integração | Validar endpoints e status codes no Insomnia/Postman; verificar regras de negócio no backend; registar bugs de API |
+| **Semana 6** | Testes de Regressão e Re-teste | Re-testar bugs reportados; descrever a simulação do teste de regressão; refinar relatórios de bugs |
+| **Semana 7** | Finalização, Revisão e Entrega | Revisão geral da documentação; gravação do vídeo de demonstração (máx. 10 min); disponibilizar repositório final. |
+
+---
