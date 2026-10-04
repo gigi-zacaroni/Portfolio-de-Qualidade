@@ -1,7 +1,8 @@
 # Auditoria de Qualidade: NaSalinha
 
 
-Portfólio de QA do desafio **Quality Assurance 2026.2 (Comp Júnior)**.
+Portfólio de QA do desafio **Quality Assurance 2026.2 (Comp Júnior)**
+
 Este repositório documenta a auditoria de qualidade do **NaSalinha**, um sistema preparado especificamente para o treinamento de novos Analistas de Quality Assurance
 ---
 
