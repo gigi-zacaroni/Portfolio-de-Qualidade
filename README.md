@@ -38,48 +38,86 @@ A auditoria cobre três funcionalidades Core:
 
 
 ---
-## Estratégia de Testes
+## Estratégia de testes
 
 ### Objetivo
-Validar as três funcionalidades Core do NaSalinha (Autenticação JWT, Check-in por Foto e Sistema de Pontos), registrando todos os defeitos encontrados de forma clara e reproduzível.
+Auditar a qualidade das três funcionalidades core do NaSalinha, registrando os defeitos encontrados de forma clara, reproduzível e rastreável aos requisitos.
 
 ### Escopo
-- **Dentro:** login e controle de acesso com JWT; upload e validação de fotos; cálculo, persistência e ranking de pontos.
-- **Fora:** performance, segurança avançada, outros navegadores além do Chrome e testes unitários do código.
-
-### Tipos de teste e ferramentas
-| Tipo | Ferramenta |
-|---|---|
-| Funcional manual (UI) e exploratório | Chrome + DevTools |
-| Funcional de API e integração | Postman |
-| Regressão e re-teste | Reexecução dos casos críticos |
+**Dentro:** os requisitos RF-01 a RF-09, RNF-01 e RNF-02 do documento de requisitos oficial.
+**Fora:** performance, segurança avançada (ex.: pentest), navegadores além do Chrome e testes unitários do código.
 
 ### Técnicas
-Partição de equivalência, análise de valor limite e cenários positivos e negativos para cada funcionalidade.
+Partição de equivalência, análise de valor limite e cenários positivos e negativos.
 
-### Principais cenários
-- **Autenticação:** login válido e inválido, rota protegida sem token ou com token expirado, recuperação de senha (Mailtrap).
-- **Check-in:** upload válido, formato inválido, arquivo acima do limite, check-in sem foto, imagem salva no Cloudinary.
-- **Pontos:** crédito correto após check-in válido, nenhum crédito em check-in inválido, consistência entre UI, API e banco, ordenação do ranking.
+### Casos de teste
+Serão escritos **2 casos por requisito**: 1 funcional (UI) e 1 de API, cada um positivo ou negativo. Nos requisitos sem interface (RNF-01 e RNF-02), o caso funcional é substituído por uma verificação no banco ou no servidor. Cada área terá ainda **1 caso de regressão**.
 
-### Ambiente
-Docker Compose com Node.js/Express/Prisma, React 18, PostgreSQL, Cloudinary e Mailtrap (Sandbox), testado no Chrome.
+Total planejado: 11 requisitos × 2 + 3 regressões = **25 casos**. Os IDs seguem o padrão `CT-JWT-01`, `CT-CHK-01` e `CT-PTS-01`, com requisito relacionado, pré-condição, passos, resultado esperado, resultado obtido e status (Pass ou Fail).
 
-### Critérios de entrada e saída
-- **Entrada:** ambiente rodando no Docker e casos de teste escritos.
-- **Saída:** todos os casos executados, bugs registrados e re-testados, regressão feita e documentação revisada.
+Erros encontrados fora do planejado entram como **casos ad-hoc** (`CT-ADHOC-01`), ligados ao bug report correspondente. Cenários que não estão nos requisitos (ex.: token expirado, recuperação de senha, tamanho máximo de arquivo) também são tratados como ad-hoc.
 
-### Gestão de bugs
-Cada bug terá ID, título, passos para reproduzir, resultado esperado e obtido, severidade (Crítica, Alta, Média ou Baixa), evidência e status (Novo → Corrigido → Re-testado → Fechado).
+### Cobertura dos requisitos
+
+| Área | Requisito | Cenários principais |
+|---|---|---|
+| JWT | RF-01 Cadastro e verificação | Cadastro válido gera código por e-mail (Mailtrap) e conta com status PENDENTE; e-mail duplicado ou campos vazios são rejeitados |
+| JWT | RF-02 Restrição de login | Login de conta não verificada é bloqueado com a mensagem "Por favor, verifique sua conta para continuar"; login após verificar o código funciona; código inválido é recusado |
+| JWT | RF-03 Controle de níveis (RBAC) | Usuário comum e requisição sem token não acessam Temporadas e Moderação; ADMINISTRADOR acessa |
+| JWT | RNF-01 Segurança de dados | Senha gravada como hash no banco; a API nunca devolve a senha |
+| Check-in | RF-04 Registro de atividade | Check-in com imagem válida é associado à temporada ativa; segundo check-in no mesmo dia é bloqueado; foto repetida é bloqueada; envio sem imagem ou com arquivo que não é imagem é rejeitado |
+| Check-in | RF-05 Fluxo de status | Novo check-in nasce PENDENTE; só o administrador aprova ou rejeita |
+| Check-in | RF-06 Propriedade | Usuário não vê, edita nem exclui check-in de outro usuário |
+| Check-in | RNF-02 Integridade de arquivos | Arquivo temporário é removido do servidor após o envio ao provedor de nuvem, com sucesso e com falha |
+| Pontos | RF-07 Atribuição de pontos | Pontos somam ao saldo e o ranking atualiza automaticamente |
+| Pontos | RF-08 Consistência de saldo | Ao remover um check-in, os pontos correspondentes são subtraídos do saldo e do ranking |
+| Pontos | RF-09 Regras de ranking | Ranking em ordem decrescente de pontuação; novo check-in em menos de 24 horas é bloqueado |
 
 ### Regressão
-Reexecução dos fluxos de maior risco após as correções: login, check-in com foto válida e cálculo de pontos/ranking.
+Para cada área será descrito um cenário simulado: caso um bug reportado por mim seja corrigido, quais testes seriam repetidos para garantir que a correção não causou efeitos colaterais. Os exemplos abaixo serão trocados pelos bugs reais encontrados.
+
+- **JWT:** caso o erro de verificação de conta seja corrigido, repetir o cadastro (RF-01), o bloqueio de login com a mensagem (RF-02), o login após verificar, o acesso de ADMIN e de usuário comum (RF-03) e o check-in (que depende do login).
+- **Check-in:** caso o erro de check-in duplicado seja corrigido, repetir o check-in válido, a foto repetida, a mudança de status pelo administrador (RF-05) e a conferência de pontos e ranking.
+- **Pontos:** caso o erro de cálculo de saldo seja corrigido, repetir a soma após check-in (RF-07), a subtração ao remover (RF-08), a ordenação do ranking e o bloqueio de check-in em menos de 24 horas (RF-09).
+
+### Gestão de bugs
+Meta mínima: **2 bug reports por área** (6 no total). Cada bug terá ID, título, ambiente, caso de teste e requisito relacionados, passos para reproduzir, resultado esperado, resultado obtido, severidade, evidência (print, vídeo ou log) e status.
+
+| Severidade | Critério |
+|---|---|
+| Crítico | Trava o sistema ou impede o uso da funcionalidade |
+| Maior | Causa erro de lógica ou de regra de negócio |
+| Menor | Erro visual ou de texto, sem impacto na lógica |
+
+**Status:** Novo → Corrigido → Re-testado → Fechado. O status fica como um campo no topo de cada arquivo em `docs/bug-reports/`.
+
+### Documentação
+A documentação segue a **Opção B (documental)**: arquivos em Markdown dentro da pasta 
+
+### Premissas
+Pontos em que o documento de requisitos não é claro. Cada premissa será confirmada durante os testes e, se o comportamento parecer incorreto, registrada como bug.
+
+- **"Um check-in por dia" (RF-04) x "intervalo inferior a 24 horas" (RF-09):** são regras diferentes (dia do calendário x janela de 24 horas). Será testado o limite, por exemplo um check-in às 23h50 e outro às 00h10.
+- **Quando os pontos são creditados (RF-07):** o requisito não diz se é ao criar o check-in ou ao ser aprovado. Será observado e registrado o comportamento real.
+- **Sem temporada ativa (RF-04):** o requisito não define o resultado; será testado.
+- **"Mesma foto" (RF-04):** não está definido se a comparação é pelo conteúdo ou pelo nome do arquivo; serão testados os dois casos.
+- **Administrador e RF-06:** o administrador altera o status de check-ins de outros usuários (RF-05), enquanto o RF-06 proíbe manipular check-ins alheios; será testado até onde vai a permissão.
+
+### Critérios de entrada e saída
+- **Entrada:** ambiente rodando no Docker e casos de teste escritos antes da execução.
+- **Saída:** casos planejados executados, ao menos 2 bugs documentados por área, casos ad-hoc registrados, cenários de regressão descritos e documentação revisada.
+
+### Relatório de testes final
+Ao fim da execução, será entregue um relatório com casos planejados x executados, casos aprovados (Pass) x reprovados (Fail) e distribuição dos bugs por severidade (Crítico, Maior e Menor).
 
 ### Riscos
-Limites das contas gratuitas (Cloudinary/Mailtrap), instabilidade do Docker e regras de negócio não documentadas. Mitigação: usar poucas imagens leves, documentar a configuração e registrar as suposições feitas.
+Limites das contas gratuitas (Cloudinary e Mailtrap), instabilidade do Docker e regras de negócio ambíguas.
+**Mitigação:** usar poucas imagens leves, documentar a configuração e registrar as premissas acima.
 
 ### Entregáveis
-Casos de teste, coleção Postman (JSON), relatórios de bugs, relatório de regressão, README e vídeo de demonstração (máx. 10 min).
+Casos de teste, bug reports e relatório de testes final (pasta `/docs`), coleção do Postman em JSON (pasta `/postman`), descrição dos cenários de regressão, este README e o vídeo de demonstração (até 10 minutos).
+
+## Como rodar o projeto
 
 # 1. Pré-requisitos
 
