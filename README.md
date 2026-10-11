@@ -97,13 +97,6 @@ A documentação segue a **Opção B (documental)**: arquivos em Markdown dentro
 ### Relatório de testes final
 Ao fim da execução, será entregue um relatório com casos planejados x executados, casos aprovados (Pass) x reprovados (Fail) e distribuição dos bugs por severidade (Crítico, Maior e Menor).
 
-### Riscos
-Limites das contas gratuitas (Cloudinary e Mailtrap), instabilidade do Docker e regras de negócio ambíguas.
-**Mitigação:** usar poucas imagens leves, documentar a configuração e registrar as premissas acima.
-
-### Entregáveis
-Casos de teste, bug reports e relatório de testes final (pasta `/docs`), coleção do Postman em JSON (pasta `/postman`), descrição dos cenários de regressão, este README e o vídeo de demonstração (até 10 minutos).
-
 ## Como rodar o projeto
 
 # 1. Pré-requisitos
