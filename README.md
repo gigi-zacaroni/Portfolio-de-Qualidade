@@ -38,6 +38,48 @@ A auditoria cobre três funcionalidades Core:
 
 
 ---
+## Estratégia de Testes
+
+### Objetivo
+Validar as três funcionalidades Core do NaSalinha (Autenticação JWT, Check-in por Foto e Sistema de Pontos), registrando todos os defeitos encontrados de forma clara e reproduzível.
+
+### Escopo
+- **Dentro:** login e controle de acesso com JWT; upload e validação de fotos; cálculo, persistência e ranking de pontos.
+- **Fora:** performance, segurança avançada, outros navegadores além do Chrome e testes unitários do código.
+
+### Tipos de teste e ferramentas
+| Tipo | Ferramenta |
+|---|---|
+| Funcional manual (UI) e exploratório | Chrome + DevTools |
+| Funcional de API e integração | Postman |
+| Regressão e re-teste | Reexecução dos casos críticos |
+
+### Técnicas
+Partição de equivalência, análise de valor limite e cenários positivos e negativos para cada funcionalidade.
+
+### Principais cenários
+- **Autenticação:** login válido e inválido, rota protegida sem token ou com token expirado, recuperação de senha (Mailtrap).
+- **Check-in:** upload válido, formato inválido, arquivo acima do limite, check-in sem foto, imagem salva no Cloudinary.
+- **Pontos:** crédito correto após check-in válido, nenhum crédito em check-in inválido, consistência entre UI, API e banco, ordenação do ranking.
+
+### Ambiente
+Docker Compose com Node.js/Express/Prisma, React 18, PostgreSQL, Cloudinary e Mailtrap (Sandbox), testado no Chrome.
+
+### Critérios de entrada e saída
+- **Entrada:** ambiente rodando no Docker e casos de teste escritos.
+- **Saída:** todos os casos executados, bugs registrados e re-testados, regressão feita e documentação revisada.
+
+### Gestão de bugs
+Cada bug terá ID, título, passos para reproduzir, resultado esperado e obtido, severidade (Crítica, Alta, Média ou Baixa), evidência e status (Novo → Corrigido → Re-testado → Fechado).
+
+### Regressão
+Reexecução dos fluxos de maior risco após as correções: login, check-in com foto válida e cálculo de pontos/ranking.
+
+### Riscos
+Limites das contas gratuitas (Cloudinary/Mailtrap), instabilidade do Docker e regras de negócio não documentadas. Mitigação: usar poucas imagens leves, documentar a configuração e registrar as suposições feitas.
+
+### Entregáveis
+Casos de teste, coleção Postman (JSON), relatórios de bugs, relatório de regressão, README e vídeo de demonstração (máx. 10 min).
 
 # 1. Pré-requisitos
 
