@@ -90,15 +90,6 @@ Meta mínima: **2 bug reports por área** (6 no total). Cada bug terá ID, títu
 ### Documentação
 A documentação segue a **Opção B (documental)**: arquivos em Markdown dentro da pasta 
 
-### Premissas
-Pontos em que o documento de requisitos não é claro. Cada premissa será confirmada durante os testes e, se o comportamento parecer incorreto, registrada como bug.
-
-- **"Um check-in por dia" (RF-04) x "intervalo inferior a 24 horas" (RF-09):** são regras diferentes (dia do calendário x janela de 24 horas). Será testado o limite, por exemplo um check-in às 23h50 e outro às 00h10.
-- **Quando os pontos são creditados (RF-07):** o requisito não diz se é ao criar o check-in ou ao ser aprovado. Será observado e registrado o comportamento real.
-- **Sem temporada ativa (RF-04):** o requisito não define o resultado; será testado.
-- **"Mesma foto" (RF-04):** não está definido se a comparação é pelo conteúdo ou pelo nome do arquivo; serão testados os dois casos.
-- **Administrador e RF-06:** o administrador altera o status de check-ins de outros usuários (RF-05), enquanto o RF-06 proíbe manipular check-ins alheios; será testado até onde vai a permissão.
-
 ### Critérios de entrada e saída
 - **Entrada:** ambiente rodando no Docker e casos de teste escritos antes da execução.
 - **Saída:** casos planejados executados, ao menos 2 bugs documentados por área, casos ad-hoc registrados, cenários de regressão descritos e documentação revisada.
