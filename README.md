@@ -53,10 +53,6 @@ Partição de equivalência, análise de valor limite e cenários positivos e ne
 ### Casos de teste
 Serão escritos **2 casos por requisito**: 1 funcional (UI) e 1 de API, cada um positivo ou negativo. Nos requisitos sem interface (RNF-01 e RNF-02), o caso funcional é substituído por uma verificação no banco ou no servidor. Cada área terá ainda **1 caso de regressão**.
 
-Total planejado: 11 requisitos × 2 + 3 regressões = **25 casos**. Os IDs seguem o padrão `CT-JWT-01`, `CT-CHK-01` e `CT-PTS-01`, com requisito relacionado, pré-condição, passos, resultado esperado, resultado obtido e status (Pass ou Fail).
-
-Erros encontrados fora do planejado entram como **casos ad-hoc** (`CT-ADHOC-01`), ligados ao bug report correspondente. Cenários que não estão nos requisitos (ex.: token expirado, recuperação de senha, tamanho máximo de arquivo) também são tratados como ad-hoc.
-
 ### Cobertura dos requisitos
 
 | Área | Requisito | Cenários principais |
