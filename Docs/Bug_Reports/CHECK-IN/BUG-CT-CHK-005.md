@@ -1,4 +1,4 @@
-# BUG-CHK-003 — Usuário comum consegue visualizar check-ins de outros usuários
+# BUG-CHK-005 — Usuário comum consegue visualizar check-ins de outros usuários
 
 | Campo | Informação |
 |:--|:--|
