@@ -23,7 +23,7 @@
 | **CT-JWT-002** | RF-01 | Cadastro com e-mail duplicado via API | API | `Não Iniciado` | N/A |
 | **CT-JWT-003** | RF-02 | Bloqueio de login com conta pendente via UI | Funcional (UI) | `Concluído` | [BUG-JWT-003](Bug_Reports/JWT/BUG-JWT-003.md) |
 | **CT-JWT-004** | RF-02 | Login e geração de JWT após verificação | API | `Não Iniciado` | N/A |
-| **CT-JWT-005** | RF-03 | Restrição de menu/rotas ADMIN para Usuário Comum | Funcional (UI) | `Concluído` | nenhum bug existente no frontend, a capacidade de gerenciar usuários, temporadas e o ranking são restritas ao administrador, usuários comuns não possuem essa |
+| **CT-JWT-005** | RF-03 | Restrição de menu/rotas ADMIN para Usuário Comum | Funcional (UI) | `Concluído` | nenhum bug existente no frontend, a capacidade de gerenciar usuários, temporadas e o ranking são restritas ao administrador, usuários comuns não possuem acesso |
 | **CT-JWT-006** | RF-03 | Acesso a endpoint de moderação com perfil ADMIN | API | `Não Iniciado` | N/A |
 | **CT-JWT-007** | RNF-01 | Hashing de senha no banco e omissão no payload | Banco / API | `Não Iniciado` | N/A |
 | **CT-JWT-REG-001** | Regressão | Suíte de regressão para fluxo de Autenticação | Regressão | `Não Iniciado` | N/A |
