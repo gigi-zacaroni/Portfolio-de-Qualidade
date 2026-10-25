@@ -1,8 +1,8 @@
-# BUG-CHK-002 — Check-in é criado já aprovado, sem passar pelo status PENDENTE
+# BUG-CHK-003 — Check-in é criado já aprovado, sem passar pelo status PENDENTE
 
 | Campo | Informação |
 |:--|:--|
-| **ID** | BUG-CHK-002 |
+| **ID** | BUG-CHK-003 |
 | **Área Core** | 2 — Check-in por Foto (com impacto na Área 3 — Sistema de Pontos) |
 | **Requisito** | RF-05 (Fluxo de status) |
 | **Caso de teste relacionado** | CT-CHK-003 (Funcional – UI) |
