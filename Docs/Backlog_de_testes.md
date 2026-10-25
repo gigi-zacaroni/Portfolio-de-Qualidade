@@ -17,8 +17,8 @@
 
 ## 1. Área Core 1: Autenticação JWT
 
-| ID | Requisito | Descrição Resumida | Tipo | Executado Por | Data Execução | Status | Bug Report Relacionado |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | Requisito | Descrição Resumida | Tipo  | Status | Bug Report Relacionado |
+| :--- | :--- | :--- | :--- | :--- | :--- | 
 | **CT-JWT-001** | RF-01 | Cadastro válido via UI e envio de e-mail Mailtrap | Funcional (UI) | | | `Concluído` | [BUG-JWT-001](Bug_Reports/JWT/BUG-JWT-001.md) |
 | **CT-JWT-002** | RF-01 | Cadastro com e-mail duplicado via API | API | | | `Não Iniciado` | N/A |
 | **CT-JWT-003** | RF-02 | Bloqueio de login com conta pendente via UI | Funcional (UI) | | | `Concluído` | [BUG-JWT-002](Bug_Reports/JWT/BUG-JWT-003.md) |
