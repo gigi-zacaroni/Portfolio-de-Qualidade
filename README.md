@@ -34,7 +34,7 @@ A auditoria cobre três funcionalidades Core:
 | Testes de API | Postman |
 | Testes de interface | Navegador (Chrome) |
 | Ambiente local | Docker e Docker Compose |
-| Documentação | Markdowns, planilhas |
+| Documentação | Markdowns, planilhas, quadro Kanban com GitHub Projects |
 
 
 ---
