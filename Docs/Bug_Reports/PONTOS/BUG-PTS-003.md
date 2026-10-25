@@ -1,0 +1,58 @@
+# BUG-PTS-003 — Pontos não são subtraídos ao excluir um check-in aprovado
+
+| Campo | Informação |
+|:--|:--|
+| **ID** | BUG-PTS-003 |
+| **Área Core** | 3 — Sistema de Pontos |
+| **Requisito** | RF-08 (Remoção proporcional de pontos ao excluir check-in) |
+| **Caso de teste relacionado** | CT-PTS-003 (Funcional – UI); relacionado a CT-PTS-004 (API) |
+| **Severidade** | Maior (erro de lógica/regra de negócio, sem travar o sistema) |
+| **Prioridade** | Alta |
+
+## Descrição
+
+Ao excluir um check-in aprovado, o check-in é removido, mas os pontos que ele gerou continuam no saldo do usuário. O total de pontos e a posição no ranking permanecem inalterados.
+
+## Pré-condições
+
+- Aplicação rodando via Docker, banco migrado e seed executado.
+- Usuário com pelo menos um check-in aprovado e saldo de pontos maior que zero.
+- Acesso com perfil ADMIN (a exclusão de check-in é restrita ao ADMIN, ex.: `admin@nasalinha.com`).
+
+## Passos para reproduzir
+
+1. Anotar a pontuação atual do usuário e sua posição no ranking.
+2. Como ADMIN, excluir um check-in aprovado desse usuário.
+3. Confirmar que o check-in saiu da lista de atividades.
+4. Atualizar a página de Ranking/Perfil e comparar o saldo e a posição com os valores do passo 1.
+
+## Resultado esperado
+
+Os pontos do check-in removido são deduzidos do saldo total do usuário, e o ranking é ajustado automaticamente.
+
+## Resultado obtido
+
+ O check-in é excluído com sucesso, mas o saldo de pontos continua o mesmo (antes: ___ pontos; depois: ___ pontos), e a posição no ranking não muda.
+
+## Análise técnica (código-fonte)
+
+Inspeção do backend, a confirmar com a execução:
+
+- `src/controllers/checkin.controller.js` (`delete`): busca o check-in, executa `prisma.checkIn.delete` e responde sucesso. **Não há nenhuma atualização** da tabela de pontos (`Point`).
+- O campo `totalPoints` e o contador `checkInsCount` do modelo `Point` só são incrementados na criação do check-in (`create`), e nunca decrementados.
+- Resultado: o saldo fica permanentemente acima do que os check-ins existentes justificam.
+
+## Impacto
+
+- Inconsistência entre os check-ins existentes e a pontuação do ranking.
+- Pontos "fantasmas": usuários mantêm pontuação de check-ins removidos, o que distorce a classificação.
+- Combinado com o BUG-CHK-001 (vários check-ins por dia), a pontuação pode crescer sem controle e sem possibilidade de correção por exclusão.
+- Afeta também o CT-PTS-004 (idempotência da exclusão) e o cenário de regressão CT-PTS-REG-001.
+
+## Evidências
+
+- [pontuacao](Docs\evidencias\rankin-nao-atualizado.png) Print do saldo e da posição no ranking **antes** da exclusão
+- [check-in_antes](Docs\evidencias\check-in_historico.png) Print do check-in antes da exclusão
+- [check-in_depois](Docs\evidencias\exclusao.png) Print da exclusão do check-in feita pelo ADMIN
+- [pontuacao](Docs\evidencias\rankin-nao-atualizado.png) Print do saldo e da posição no ranking **depois** da exclusão, sem alteração
+
