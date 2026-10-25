@@ -34,11 +34,11 @@
 
 | ID | Requisito | Descrição Resumida | Tipo | Executado Por | Data Execução | Status | Bug Report Relacionado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **CT-CHK-001** | RF-04 | Check-in feito mais de uma vez por dia | Funcional (UI) | | | `Concluído` | [CHK-001](Bug_Reports/CHECK-IN/BUG-CT-CHK-001.md) |
+| **CT-CHK-001** | RF-04 | Check-in feito mais de uma vez por dia | Funcional (UI) | | | `Concluído` | [BUG-CHK-001](Bug_Reports/CHECK-IN/BUG-CT-CHK-001.md) |
 | **CT-CHK-002** | RF-04 | Envio de check-in sem arquivo de imagem válido | API | | | `Não Iniciado` | N/A |
-| **CT-CHK-003** | RF-05 | Transição de status PENDENTE -> APROVADO pelo ADMIN | Funcional (UI) | | | `Concluído` | [CHK-002](Bug_Reports\CHECK-IN\BUG-CT-CHK-003.md) |
+| **CT-CHK-003** | RF-05 | Transição de status PENDENTE -> APROVADO pelo ADMIN | Funcional (UI) | | | `Concluído` | [BUG-CHK-003](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/CHECK-IN/BUG-CT-CHK-003.md) |
 | **CT-CHK-004** | RF-05 | Tentativa de alteração de status por Usuário Comum | API | | | `Não Iniciado` | N/A |
-| **CT-CHK-005** | RF-06 | Garantia de não edição/visualização de check-in alheio | Funcional (UI) | | | `Concluído` | [BUG-CHK-005](Bug_Reports\CHECK-IN\BUG-CT-CHK-005.md) |
+| **CT-CHK-005** | RF-06 | Garantia de não edição/visualização de check-in alheio | Funcional (UI) | | | `Concluído` | [BUG-CHK-005](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/CHECK-IN/BUG-CT-CHK-005.md) |
 | **CT-CHK-006** | RF-06 | Tentativa de deleção de check-in de outro usuário | API | | | `Não Iniciado` | N/A |
 | **CT-CHK-007** | RNF-02 | Remoção de arquivo temporário local do Docker | Servidor | | | `Não Iniciado` | N/A |
 | **CT-CHK-REG-001**| Regressão | Suíte de regressão para fluxo de Check-in e Mídia | Regressão | | | `Não Iniciado` | N/A |
@@ -51,7 +51,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **CT-PTS-001** | RF-07 | Soma de pontos e atualização de ranking após aprovação | Funcional (UI) | | | `Concluído` | não há bug relacionado, os pontos são atualizados corretamente |
 | **CT-PTS-002** | RF-07 | Validação do saldo retornado no endpoint de perfil | API | | | `Não Iniciado` | N/A |
-| **CT-PTS-003** | RF-08 | Subtração de pontos ao excluir check-in aprovado | Funcional (UI) | | | `Concluído` | [BUG-PTS-003](Bug_Reports\PONTOS\BUG-PTS-003) |
+| **CT-PTS-003** | RF-08 | Subtração de pontos ao excluir check-in aprovado | Funcional (UI) | | | `Concluído` | [BUG-PTS-003](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/PONTOS/BUG-PTS-003.md) |
 | **CT-PTS-004** | RF-08 | Idempotência em requisições seguidas de exclusão | API | | | `Não Iniciado` | N/A |
 | **CT-PTS-005** | RF-09 | Validação da ordem decrescente na tabela de Ranking | Funcional (UI) | | | `Concluído` | não há bug relacionado, o ranking é mostrado corretamente em ordem decrescente |
 | **CT-PTS-006** | RF-09 | Bloqueio de segundo check-in em intervalo < 24h | API | | | `Não Iniciado` | N/A |
