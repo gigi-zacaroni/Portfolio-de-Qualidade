@@ -78,4 +78,5 @@
 
 | Semana | Bugs reportados | Resumo |
 |:--|:--|:--|
-| Semana 3 | BUG-JWT-001, BUG-JWT-003, BUG-CHK-001,BUG-CHK-003, BUG-CHK-005, BUG-CHK-003, BUG-PTS-001 | Testes funcionais de UI das 3 áreas Core. O cadastro não exige verificação de e-mail e o login não bloqueia contas pendentes. No check-in, o upload só funcionou após configurar o Cloudinary (problema de ambiente); com ele ativo, o sistema aceita vários check-ins por dia, cria o check-in já aprovado e deixa um usuário ver os check-ins de outro. Nos pontos, excluir um check-in não desconta o saldo. Restam executar CT-PTS-001 e CT-PTS-005 e reportar mais 1 bug da Área 3. |
+| Semana 3 | BUG-JWT-001, BUG-JWT-003, BUG-CHK-001,BUG-CHK-003, BUG-CHK-005, BUG-CHK-003, BUG-PTS-001 | Testes funcionais de UI das 3 áreas Core. O cadastro não exige verificação de e-mail e o login não bloqueia contas pendentes. No check-in, o upload só funcionou após configurar o Cloudinary (problema de ambiente); com ele ativo, o sistema aceita vários check-ins por dia, cria o check-in já aprovado e deixa um usuário ver os check-ins de outro. Nos pontos, excluir um check-in não desconta o saldo. 
+|
