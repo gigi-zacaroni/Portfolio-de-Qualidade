@@ -1,8 +1,8 @@
-# BUG-JWT-002 — Login é permitido para conta que não verificou o e-mail
+# BUG-JWT-003 — Login é permitido para conta que não verificou o e-mail
 
 | Campo | Informação |
 |:--|:--|
-| **ID** | BUG-JWT-002 |
+| **ID** | BUG-JWT-003 |
 | **Área Core** | 1 — Autenticação JWT |
 | **Requisito** | RF-02 (Login e bloqueio de conta pendente) |
 | **Caso de teste relacionado** | CT-JWT-003 (Funcional – UI, negativo) |
