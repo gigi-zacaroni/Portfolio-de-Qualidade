@@ -19,9 +19,9 @@
 
 | ID | Requisito | Descrição Resumida | Tipo | Status | Bug Report Relacionado |
 | --- | --- | --- | --- | --- | --- |
-| **CT-JWT-001** | RF-01 | Cadastro válido via UI e envio de e-mail Mailtrap | Funcional (UI) | `Concluído` | [BUG-JWT-001](https://www.google.com/search?q=Bug_Reports/JWT/BUG-JWT-001.md) |
+| **CT-JWT-001** | RF-01 | Cadastro válido via UI e envio de e-mail Mailtrap | Funcional (UI) | `Concluído` | [BUG-JWT-001](Bug_Reports/JWT/BUG-JWT-001.md) |
 | **CT-JWT-002** | RF-01 | Cadastro com e-mail duplicado via API | API | `Não Iniciado` | N/A |
-| **CT-JWT-003** | RF-02 | Bloqueio de login com conta pendente via UI | Funcional (UI) | `Concluído` | [BUG-JWT-003](https://www.google.com/search?q=Bug_Reports/JWT/BUG-JWT-003.md) |
+| **CT-JWT-003** | RF-02 | Bloqueio de login com conta pendente via UI | Funcional (UI) | `Concluído` | [BUG-JWT-003](Bug_Reports/JWT/BUG-JWT-003.md) |
 | **CT-JWT-004** | RF-02 | Login e geração de JWT após verificação | API | `Não Iniciado` | N/A |
 | **CT-JWT-005** | RF-03 | Restrição de menu/rotas ADMIN para Usuário Comum | Funcional (UI) | `Concluído` | nenhum bug existente no frontend, a capacidade de gerenciar usuários, temporadas e o ranking são restritas ao administrador, usuários comuns não possuem essa |
 | **CT-JWT-006** | RF-03 | Acesso a endpoint de moderação com perfil ADMIN | API | `Não Iniciado` | N/A |
@@ -34,7 +34,7 @@
 
 | ID | Requisito | Descrição Resumida | Tipo | Status | Bug Report Relacionado |
 | --- | --- | --- | --- | --- | --- |
-| **CT-CHK-001** | RF-04 | Check-in feito mais de uma vez por dia | Funcional (UI) | `Concluído` | [BUG-CHK-001](https://www.google.com/search?q=Bug_Reports/CHECK-IN/BUG-CT-CHK-001.md) |
+| **CT-CHK-001** | RF-04 | Check-in feito mais de uma vez por dia | Funcional (UI) | `Concluído` | [BUG-CHK-001](Bug_Reports/CHECK-IN/BUG-CT-CHK-001.md) |
 | **CT-CHK-002** | RF-04 | Envio de check-in sem arquivo de imagem válido | API | `Não Iniciado` | N/A |
 | **CT-CHK-003** | RF-05 | Transição de status PENDENTE -> APROVADO pelo ADMIN | Funcional (UI) | `Concluído` | [BUG-CHK-003](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/CHECK-IN/BUG-CT-CHK-003.md) |
 | **CT-CHK-004** | RF-05 | Tentativa de alteração de status por Usuário Comum | API | `Não Iniciado` | N/A |
