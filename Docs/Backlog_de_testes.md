@@ -54,7 +54,7 @@
 | **CT-PTS-003** | RF-08 | Subtração de pontos ao excluir check-in aprovado | Funcional (UI) | `Concluído` | [BUG-PTS-003](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/PONTOS/BUG-PTS-003.md) |
 | **CT-PTS-004** | RF-08 | Idempotência em requisições seguidas de exclusão | API | `Concluído` | não há bug relacionado, o ranking é mostrado corretamente em ordem decrescente |
 | **CT-PTS-005** | RF-09 | Validação da ordem decrescente na tabela de Ranking | Funcional (UI) | `Concluído` | não há bug relacionado, o ranking é mostrado corretamente em ordem decrescente |
-| **CT-PTS-006** | RF-09 | Bloqueio de segundo check-in em intervalo < 24h | API | | | `Concluído` | [BUG-PTS-006](Docs\Bug_Reports\PONTOS\BUG-PTS-006.md) |
+| **CT-PTS-006** | RF-09 | Bloqueio de segundo check-in em intervalo < 24h | API | `Concluído` | [BUG-PTS-006](Docs\Bug_Reports\PONTOS\BUG-PTS-006.md) |
 | **CT-PTS-REG-001** | Regressão | Suíte de regressão para Cálculo de Pontos e Ranking | Regressão | `Não Iniciado` | N/A |
 
 ---
