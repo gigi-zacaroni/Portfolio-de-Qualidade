@@ -71,7 +71,7 @@
 
 ## 5. Resumo da Execução (Métricas)
 
-- **Total Planejado:** 24 Casos
+- **Total Planejado:** 23 Casos
 - **Executados:** 19
 
 # Resumo da Semana
