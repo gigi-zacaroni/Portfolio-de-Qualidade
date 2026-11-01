@@ -1,3 +1,35 @@
+| Campo | Informação |
+|:--|:--|
+| **ID** | BUG-PTS-006 |
+| **Área Core** | 3 — Pontuação |
+| **Requisito** | Regra de negócio — Limite de um check-in a cada 24 horas |
+| **Caso de teste relacionado** | CT-PTS-006 (Funcional – API) |
+| **Severidade** | Maior (erro de regra de negócio que permite acúmulo indevido de pontos) |
+| **Prioridade** | Alta |
+
+## Descrição
+
+O sistema permite que um mesmo usuário realize mais de um check-in em um intervalo inferior a 24 horas. Ao enviar uma nova requisição para o endpoint de criação de check-ins, mesmo já existindo um registro realizado no mesmo dia, a API permite a operação, aprova automaticamente o novo check-in e concede os pontos correspondentes.
+
+## Pré-condições
+
+- Aplicação rodando via Docker, com o banco de dados migrado.
+- Usuário cadastrado e autenticado com um token JWT válido.
+- Existência de uma temporada ativa.
+- Usuário já possui pelo menos um check-in realizado nas últimas 24 horas.
+- Imagem válida disponível para envio na requisição.
+
+## Passos para reproduzir
+
+1. Autenticar um usuário e obter seu token JWT.
+2. Consultar os check-ins do usuário pelo endpoint `GET /api/checkins/my-checkins`.
+3. Confirmar a existência de um check-in realizado nas últimas 24 horas.
+4. Enviar uma nova requisição `POST /api/checkins` utilizando o mesmo usuário.
+5. Na aba **Body**, selecionar `form-data` e adicionar o campo `photo` com uma imagem válida.
+6. Enviar a requisição e observar a resposta da API.
+
+
+
 ## Resultado esperado
 
 - A API deve identificar que o usuário já possui um check-in realizado nas últimas 24 horas.
