@@ -1,3 +1,5 @@
+# BUG-PTS-006 - Bloqueio de segundo check-in em intervalo < 24h
+
 | Campo | Informação |
 |:--|:--|
 | **ID** | BUG-PTS-006 |
