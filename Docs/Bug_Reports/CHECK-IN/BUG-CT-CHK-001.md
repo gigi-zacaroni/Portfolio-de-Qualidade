@@ -52,6 +52,6 @@ Inspeção do backend :
 
 ## Evidências
 
-- ![Check-in](../../evidencias/Tela_inicial.png)  Print da lista de atividades com vários check-ins no mesmo dia
+- ![Check-in](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/evidencias/check-in.png)  Print da lista de atividades com vários check-ins no mesmo dia
 - ![Pontuação](../../evidencias/pontuacao.png) Print do ranking refletindo a pontuação extra
 
