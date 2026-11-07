@@ -52,4 +52,4 @@ Inspeção do backend, a confirmar com a execução:
 
 ## Evidências
 
-- [Check-in](Docs\evidencias\Tela_inicial.png) Print do check-in recém-criado já com status APROVADO
+- ![Check-in](Docs\evidencias\Tela_inicial.png) Print do check-in recém-criado já com status APROVADO

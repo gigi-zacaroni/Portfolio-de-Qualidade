@@ -51,8 +51,12 @@ Inspeção do backend, a confirmar com a execução:
 
 ## Evidências
 
-- [pontuacao](Docs\evidencias\rankin-nao-atualizado.png) Print do saldo e da posição no ranking **antes** da exclusão
-- [check-in_antes](Docs\evidencias\check-in_historico.png) Print do check-in antes da exclusão
-- [check-in_depois](Docs\evidencias\exclusao.png) Print da exclusão do check-in feita pelo ADMIN
-- [pontuacao](Docs\evidencias\rankin-nao-atualizado.png) Print do saldo e da posição no ranking **depois** da exclusão, sem alteração
+- ![pontuacao](Docs\evidencias\rankin-nao-atualizado.png) 
+Print do saldo e da posição no ranking **antes** da exclusão
+- ![check-in_antes](Docs\evidencias\check-in_historico.png) 
+Print do check-in antes da exclusão
+- ![check-in_depois](Docs\evidencias\exclusao.png) 
+Print da exclusão do check-in feita pelo ADMIN
+- ![pontuacao](Docs\evidencias\rankin-nao-atualizado.png) 
+Print do saldo e da posição no ranking **depois** da exclusão, sem alteração
 

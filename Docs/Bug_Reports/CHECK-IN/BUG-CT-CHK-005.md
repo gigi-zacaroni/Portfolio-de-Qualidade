@@ -50,5 +50,5 @@ Inspeção do backend, a confirmar com a execução:
 
 ## Evidências
 
-- [check-in_historico](Docs\evidencias\check-in_historico.png) Print do histórico do Usuário A exibindo o check-in do Usuário B
+- ![check-in_historico](Docs\evidencias\check-in_historico.png) Print do histórico do Usuário A exibindo o check-in do Usuário B
 

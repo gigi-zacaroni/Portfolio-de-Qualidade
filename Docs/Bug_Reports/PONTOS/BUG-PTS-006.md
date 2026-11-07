@@ -72,4 +72,4 @@ Inspeção de `src/controllers/checkin.controller.js`:
 
 ## Evidências
 
-- [Histórico de check-ins](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/evidencias/CT-PTS-006.png) Print da consulta `GET /api/checkins/my-checkins`, demonstrando a existência de dois check-ins feitos no mesmo dia
+- ![Histórico de check-ins](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/evidencias/CT-PTS-006.png) Print da consulta `GET /api/checkins/my-checkins`, demonstrando a existência de dois check-ins feitos no mesmo dia

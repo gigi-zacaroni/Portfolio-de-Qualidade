@@ -56,5 +56,5 @@ Inspeção do backend e do schema Prisma
 
 ## Evidências
 
-- [login](../../evidencias/login.png) Print da tela de cadastro e do redirecionamento para o login
-- [Caixa-de-entrada](../../evidencias/caixa_de_entrada.png) Print da inbox do Mailtrap sem e-mail de verificação 
+- ![login](Docs/evidencias/login1.png) Print da tela de cadastro e do redirecionamento para o login
+- ![Caixa-de-entrada](Docs/evidencias/caixa_de_entrada.png) Print da inbox do Mailtrap sem e-mail de verificação 
