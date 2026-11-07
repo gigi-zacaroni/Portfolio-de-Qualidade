@@ -26,7 +26,7 @@
 | **CT-JWT-005** | RF-03 | Restrição de menu/rotas ADMIN para Usuário Comum | Funcional (UI) | `Concluído` | nenhum bug existente no frontend, a capacidade de gerenciar usuários, temporadas e o ranking são restritas ao administrador, usuários comuns não possuem acesso |
 | **CT-JWT-006** | RF-03 | Acesso a endpoint de moderação com perfil ADMIN | API  | `Concluído` | nenhum bug encontrado, o caso é tratado de forma esperada |
 | **CT-JWT-007** | RNF-01 | Hashing de senha no banco e omissão no payload | Banco / API | `Concluído` | nenhum bug encontrado, o caso é tratado de forma esperada  |
-| **CT-JWT-REG-001** | Regressão | Suíte de regressão para fluxo de Autenticação | Regressão | `Concluído` | [CT-JWT-REG-001](Testes_de_Regressao.md?plain=1#L9) |
+| **CT-JWT-REG-001** | Regressão | Suíte de regressão para fluxo de Autenticação | Regressão | `Concluído` | [CT-JWT-REG-001](Testes_de_Regressão.md#ct-jwt-reg-001--regressão-de-autenticação-e-acesso) |
 
 ---
 
@@ -41,7 +41,7 @@
 | **CT-CHK-005** | RF-06 | Garantia de não edição/visualização de check-in alheio | Funcional (UI) | `Concluído` | [BUG-CHK-005](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/CHECK-IN/BUG-CT-CHK-005.md) |
 | **CT-CHK-006** | RF-06 | Tentativa de deleção de check-in de outro usuário | API  | `Concluído` |  nenhum bug encontrado, o caso é tratado de forma esperada |
 | **CT-CHK-007** | RNF-02 | Remoção de arquivo temporário local do Docker | Servidor | `Concluído` |  nenhum bug encontrado, o caso é tratado de forma esperada  |
-| **CT-CHK-REG-001** | Regressão | Suíte de regressão para fluxo de Check-in e Mídia | Regressão | `Concluído` | [CT-CHK-REG-001](Testes_de_Regressao.md?plain=1#L67)  |
+| **CT-CHK-REG-001** | Regressão | Suíte de regressão para fluxo de Check-in e Mídia | Regressão | `Concluído` | [CT-CHK-REG-001](Testes_de_Regressão.md#ct-chk-reg-001--regressão-do-fluxo-de-mídia-e-duplicidade)  |
 
 ---
 
@@ -54,8 +54,8 @@
 | **CT-PTS-003** | RF-08 | Subtração de pontos ao excluir check-in aprovado | Funcional (UI) | `Concluído` | [BUG-PTS-003](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/PONTOS/BUG-PTS-003.md) |
 | **CT-PTS-004** | RF-08 | Idempotência em requisições seguidas de exclusão | API | `Concluído` | não há bug relacionado, o ranking é mostrado corretamente em ordem decrescente |
 | **CT-PTS-005** | RF-09 | Validação da ordem decrescente na tabela de Ranking | Funcional (UI) | `Concluído` | não há bug relacionado, o ranking é mostrado corretamente em ordem decrescente |
-| **CT-PTS-006** | RF-09 | Bloqueio de segundo check-in em intervalo < 24h | API | `Concluído` | [BUG-PTS-006](Docs\Bug_Reports\PONTOS\BUG-PTS-006.md) |
-| **CT-PTS-REG-001** | Regressão | Suíte de regressão para Cálculo de Pontos e Ranking | Regressão | `Concluído` | [CT-PTS-REG-001](Testes_de_Regressao.md?plain=1#L128)|
+| **CT-PTS-006** | RF-09 | Bloqueio de segundo check-in em intervalo < 24h | API | `Concluído` | [BUG-PTS-006](Bug_Reports/PONTOS/BUG-PTS-006.md) |
+| **CT-PTS-REG-001** | Regressão | Suíte de regressão para Cálculo de Pontos e Ranking | Regressão | `Concluído` | [CT-PTS-REG-001](Testes_de_Regressão.md#ct-pts-reg-001--regressão-de-cálculo-de-saldo-e-exibição-de-ranking)|
 
 ---
 ## 4. Testes Ad-hoc / Extras (Bugs Não Planejados)

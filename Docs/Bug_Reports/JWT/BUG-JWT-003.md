@@ -47,7 +47,7 @@ Inspeção do backend e do schema Prisma
 
 ## Evidências
 
-- ![login](Docs/evidencias/login1.png) ![login](Docs/evidencias/login2.png) 
+- ![login](../../evidencias/login1.png) ![login](../../evidencias/login2.png) 
 
 Print da tela de login com as credenciais da conta não verificada
 

@@ -53,4 +53,4 @@ Um usuário com perfil TRAINEE consegue consultar o ranking diretamente pela API
 
 ## Evidências
 
-- ![Ranking](Docs/evidencias/ranking-trainee.png) Print da requisição `GET /api/rankings` com token TRAINEE retornando 200 OK
+- ![Ranking](../../evidencias/ranking-trainee.png) Print da requisição `GET /api/rankings` com token TRAINEE retornando 200 OK
