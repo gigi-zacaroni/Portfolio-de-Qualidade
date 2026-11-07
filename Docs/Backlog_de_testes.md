@@ -40,7 +40,7 @@
 | **CT-CHK-004** | RF-05 | Tentativa de alteração de status por Usuário Comum | API | `Concluído` | nenhum bug encontrado, o caso é tratado de forma esperada |
 | **CT-CHK-005** | RF-06 | Garantia de não edição/visualização de check-in alheio | Funcional (UI) | `Concluído` | [BUG-CHK-005](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/Bug_Reports/CHECK-IN/BUG-CT-CHK-005.md) |
 | **CT-CHK-006** | RF-06 | Tentativa de deleção de check-in de outro usuário | API  | `Concluído` |  nenhum bug encontrado, o caso é tratado de forma esperada |
-| **CT-CHK-007** | RNF-02 | Remoção de arquivo temporário local do Docker | Servidor | `Não Iniciado` | N/A |
+| **CT-CHK-007** | RNF-02 | Remoção de arquivo temporário local do Docker | Servidor | `Concluído` |  nenhum bug encontrado, o caso é tratado de forma esperada  |
 | **CT-CHK-REG-001** | Regressão | Suíte de regressão para fluxo de Check-in e Mídia | Regressão | `Não Iniciado` | N/A |
 
 ---
