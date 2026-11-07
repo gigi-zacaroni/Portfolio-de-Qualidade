@@ -52,4 +52,4 @@ Inspeção do backend, a confirmar com a execução:
 
 ## Evidências
 
-- ![Check-in](../../evidencias/Tela_inicial.png) Print do check-in recém-criado já com status APROVADO
+- ![Check-in](https://github.com/gigi-zacaroni/Portfolio-de-Qualidade/blob/main/Docs/evidencias/check-in.png) Print do check-in recém-criado já com status APROVADO
