@@ -5,11 +5,10 @@
 
 ---
 
-## Legenda de Status e Severidade
+## Legenda de Tipo e Severidade
 
 | Campo | Opções / Definições |
 | :--- | :--- |
-| **Status** | `Não Iniciado` | `Em Execução` | `Pass` (Aprovado) | `Fail` (Reprovado/Bug) | `Bloqueado` |
 | **Tipo** | `Funcional (UI)` | `API` | `Banco de Dados / Servidor` | `Regressão` | `Ad-hoc (Extra)` |
 | **Severidade (Bugs)** | **Crítico:** Trava o sistema ou impede o uso da funcionalidade principais.<br>**Maior:** Erro de regra de negócio ou lógica sem travar tudo.<br>**Menor:** Erro visual, texto ou ajuste de layout. |
 
